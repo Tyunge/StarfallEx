@@ -325,9 +325,9 @@ if SERVER then
 
 		local vec = vunwrap(inertia)
 		checkvector(vec)
-		vec[1] = math.Clamp(vec[1], 1, 100000)
-		vec[2] = math.Clamp(vec[2], 1, 100000)
-		vec[3] = math.Clamp(vec[3], 1, 100000)
+		vec[1] = math.Clamp(vec[1], 0.01, 100000)
+		vec[2] = math.Clamp(vec[2], 0.01, 100000)
+		vec[3] = math.Clamp(vec[3], 0.01, 100000)
 
 		phys:SetInertia(vec)
 	end
